@@ -12,8 +12,8 @@ export async function POST(request: Request) {
     console.log(body);
     
   //signature = hashed string that is used to verify the authenticity and integrity of the data being sent to Cloudinary's servers
-
-  const signature = cloudinary.utils.api_sign_request(paramsToSign, process.env.CLOUDINARY_API_SECRET);
+  const apiSecret = process.env.CLOUDINARY_API_SECRET || "defaultSecret";
+  const signature = cloudinary.utils.api_sign_request(paramsToSign,apiSecret);
     
   return Response.json({ signature });
 }
