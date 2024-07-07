@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+const nextConfig = {
+    env: {
+      NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+      NEXT_PUBLIC_CLOUDINARY_API_KEY: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+      CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
+      NEXT_PUBLIC_CLOUDINARY_LIBRARY_TAG: process.env.NEXT_PUBLIC_CLOUDINARY_LIBRARY_TAG,
+      NEXT_PUBLIC_CLOUDINARY_CREATIONS_TAG: process.env.NEXT_PUBLIC_CLOUDINARY_CREATIONS_TAG,
+    },
+  };
+  
+  module.exports = nextConfig;
